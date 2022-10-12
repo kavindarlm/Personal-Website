@@ -29,26 +29,25 @@ img{
 
 nav {
     position: fixed;
-    /* background-color: rgba(0, 0, 0, 0.477); */
-    width: 729px;
-    display: table;
-    /* margin: 0 auto; */
+    background-color: rgb(83, 82, 82);
     transform: translateY(-50%);
-    margin-top: 40px;
+    margin-top: 22.5px;
     right: 0px;
     left: 0px;
-    margin-right: 500px;
-    margin-left: 300px;
+    z-index: 5;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    flex-direction: column;
     
 
 }
   
 nav a {
     position: relative;
-    width: 33.333%;
+    width: 402px;
     display: table-cell;
     text-align: center;
-    color: #0713f6;
+    color: #ffffff;
     text-decoration: none;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 2rem;
@@ -89,11 +88,11 @@ nav a:nth-child(1):after {
 }
   
 nav a:nth-child(2):before {
-    background-color: #00e2ff;
+    background-color: #040c50;
 }
   
 nav a:nth-child(2):after {
-    background-color: #89ff00;
+    background-color: #0780f8;
 }
   
 nav a:nth-child(3):before {
@@ -109,14 +108,14 @@ nav a:nth-child(4):before {
 }
   
 nav a:nth-child(4):after {
-    background-color: rgb(216, 119, 112);
+    background-color: rgb(149, 247, 164);
 }
   
 #indicator {
     position: absolute;
-    left: 5%;
+    left: 10%;
     bottom: 0;
-    width: 30px;
+    width: 40px;
     height: 3px;
     background-color: rgb(11, 239, 42);
     border-radius: 5px;
@@ -129,10 +128,11 @@ nav a:hover {
   
 nav a:hover:before,
 nav a:hover:after {
-    transform: scale(1);
+    transform: scale(4);
 }
   
 nav a:nth-child(1):hover ~ #indicator {
+    left: 10%;
     background: linear-gradient(130deg, yellow, red);
 }
   
@@ -142,13 +142,13 @@ nav a:nth-child(2):hover ~ #indicator {
 }
   
 nav a:nth-child(3):hover ~ #indicator {
-    left: 70%;
-    background: linear-gradient(130deg, purple, palevioletred);
+    left: 60%;
+    background: linear-gradient(130deg, rgb(69, 3, 69), palevioletred);
 }
 
 nav a:nth-child(4):hover ~ #indicator {
-    left: 90%;
-    background: linear-gradient(130deg, purple, palevioletred);
+    left: 87%;
+    background: linear-gradient(130deg, rgb(4, 248, 98), rgb(139, 6, 50));
 }
 /*End Of Nav- section */  
 
@@ -363,24 +363,18 @@ nav a:nth-child(4):hover ~ #indicator {
     border-top: 5px solid  rgb(5, 2, 79);
 }
 #contact .contact{
-    flex-direction: column;
+    flex-direction:column;
     max-width: 1200px;
     margin: 0 auto;
 }
-#contact .contact-items{
-    width: 500px;
-}
 #contact .contact-item{
     width: 80%;
-    /* padding: 20px; */
     text-align: center;
     border-radius: 10px;
     padding: 30px;
     margin: 30px;
     justify-content: center;
-    display: flex;
     align-items: center;
-    flex-direction: column;
     box-shadow: 0px 0px 18px  ;
     background-color: white;
 }
@@ -391,16 +385,19 @@ nav a:nth-child(4):hover ~ #indicator {
     width: 70px;
     margin: 0 auto;
     margin-bottom: 10px;
+    align-items: center;
 }
 #contact .contact-info h1{
     font-size: 2.5rem;
     font-weight: 500;
-    margin-bottom: 5px;
+    /* margin-bottom: 5px; */
+    text-align: center;
 }
 #contact .contact-info h2{
     font-size: 1.3rem;
     line-height: 2rem;
     font-weight: 500;
+    text-align: center;
 
 }
 /*End of Contact section*/
@@ -412,25 +409,18 @@ nav a:nth-child(4):hover ~ #indicator {
 #footer .footer{
     min-height: 200px;
     flex-direction: column;
-    padding-top: 50px;
     padding-bottom: 10px;
+    
 
-}
-#footer h1{
-    color: blue;
-    font-weight: 900;
-    font-size: 2.5rem;
-    letter-spacing: .1rem;
-    margin-top: 10px;
-    margin-bottom: 8px;
 }
 #footer h2{
     color: white;
     font-weight: 500;
-    font-size: 1.8rem;
+    font-size: 2rem;
     letter-spacing: .1rem;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 5px;
+    margin-bottom: 30px;
+    text-align: center;
 }
 #footer .social-icon{
     display: flex;
@@ -470,6 +460,9 @@ nav a:nth-child(4):hover ~ #indicator {
 
 /*    media quary for tablet    */
 @media only screen and (min-width:768px){
+    .nav_ico{
+        display: none;
+    }
     .cta{
         font-size: 2.5rem;
         padding: 20px 60px;
@@ -541,5 +534,3 @@ nav a:nth-child(4):hover ~ #indicator {
         padding-left: 20px;
     }
 }
-
-/*    media quary for mobile phone    */
